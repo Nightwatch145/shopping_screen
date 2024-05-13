@@ -4,8 +4,6 @@ class CardData
   final int price;
   int quantity;
   CardData({required this.name, required this.size, required this.image, required this.color, required this.quantity, required this.price});
-
-
 }
 
 List<CardData> imageData =
@@ -17,7 +15,6 @@ List<CardData> imageData =
       color: 'Black',
        quantity: 1,
     price: 51,
-
   ),
       CardData(
           name: 'T-Shirt',

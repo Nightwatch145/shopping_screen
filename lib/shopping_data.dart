@@ -1,4 +1,3 @@
-
 import 'package:shopping_screen/card_quantity_button.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_screen/card_data.dart';
@@ -159,19 +158,25 @@ class ShoppingData extends StatelessWidget {
                           ),
                           //const SizedBox(width:40 ),
                           Expanded(
-                            child: Wrap(
-                              children: [
-                                Text(
-                                  imageData[index].quantity.toString(),
-                                  style: const TextStyle(fontSize: 17,fontFamily: "Metropolis", fontWeight: FontWeight.w900),
-                                ),
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 22),
+                              child: Wrap(
+                                children: [
+                                  Text(
+                                    imageData[index].quantity.toString(),
+                                    style: const TextStyle(fontSize: 17,fontFamily: "Metropolis", fontWeight: FontWeight.w900),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                           Expanded(
-                            child: QuantityButton(
-                              icon: Icons.add,
-                              onPressed:increasedButton,
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 15),
+                              child: QuantityButton(
+                                icon: Icons.add,
+                                onPressed:increasedButton,
+                              ),
                             ),
                           ),
                           Expanded(
@@ -198,7 +203,6 @@ class ShoppingData extends StatelessWidget {
                           ),
                         ],
                       ),
-                    
                   )
                 ],
               ),

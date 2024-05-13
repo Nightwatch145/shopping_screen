@@ -11,7 +11,6 @@ class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
-
 class _HomeScreenState extends State<HomeScreen> {
   late int totalPrice;
 
@@ -20,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
     totalPrice = calculateTotalPrice();
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -68,12 +66,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           );
-
         },
       ),
     );
   }
-
   int calculateTotalPrice() {
     totalPrice = 0;
     for (CardData data in imageData) {
@@ -81,7 +77,6 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     return totalPrice;
   }
-
   void increasedButton(int index, Orientation orientation) {
     if (imageData[index].quantity < 5) {
       imageData[index].quantity = imageData[index].quantity + 1;
@@ -92,7 +87,6 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     setState((){});
   }
-
   void showAlertDialog(int index, Orientation orientation) {
     showDialog(
       context: context,
@@ -105,7 +99,6 @@ class _HomeScreenState extends State<HomeScreen> {
       },
     );
   }
-
   void decreasedButton(int index) {
     if (imageData[index].quantity > 1) {
      imageData[index].quantity = imageData[index].quantity - 1;
@@ -113,11 +106,10 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     setState((){});
   }
-
   SnackBar showSnackBar() {
     return const SnackBar(
       content:  Text(
-        "Congrats! Your purchasing process is done",
+        "Your purchasing process is done. Thank you",
         style: TextStyle(
           fontSize: 15,
           fontFamily: "Metropolis",
@@ -125,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       padding: EdgeInsets.all(20.00),
-      duration: Duration(seconds: 3),
+      duration: Duration(seconds: 2),
       backgroundColor: Colors.green,
       elevation: 10,
     );

@@ -3,7 +3,7 @@ import 'package:shopping_screen/home.dart';
 
 void main()
 {
-  runApp( const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget{

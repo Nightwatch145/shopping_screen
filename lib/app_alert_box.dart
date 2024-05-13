@@ -39,6 +39,10 @@ class AppAlertDialog extends StatelessWidget {
               ? MediaQuery.of(context).size.height * 0.06
               : MediaQuery.of(context).size.height * 0.12,
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFDB3022),
+              foregroundColor: Colors.white,
+            ),
             onPressed: () {
               Navigator.pop(context);
             },

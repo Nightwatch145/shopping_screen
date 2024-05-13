@@ -5,7 +5,6 @@ class CheckOutButton extends StatelessWidget {
   final double screenHeight, screenWidth;
   final Function onPressed;
   final int totalPrice;
-
   const CheckOutButton({
     super.key,
     required this.orientation,
