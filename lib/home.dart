@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
   SnackBar showSnackBar() {
     return const SnackBar(
       content:  Text(
-        "Your purchasing process is done. Thank you",
+        "Congratulations! Your purchasing process is done.",
         style: TextStyle(
           fontSize: 15,
           fontFamily: "Metropolis",
